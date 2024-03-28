@@ -1,4 +1,4 @@
-.timer {
+body > div {
     width: 100vw;
     height: 50vh;
     display: flex;
@@ -8,7 +8,7 @@
     gap: 5vh;
 }
 
-button {
+button.start {
     border-radius: 50%;
     background-color: chartreuse;
     border: none;
@@ -16,6 +16,10 @@ button {
     color: white;
 }
 
-.timer > * {
-    display: block;
+.timer {
+    display: none;
+}
+
+.choice  {
+    display: flex;
 }
