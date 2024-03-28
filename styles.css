@@ -1,9 +1,17 @@
 .timer {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 5vh;
+}
+
+button {
+    border-radius: 50%;
+    background-color: chartreuse;
+    border: none;
+    padding: 5vw;
+    color: white;
 }

@@ -46,10 +46,12 @@ function start_stop_timer() {
         startTimer(time, display);
         state = "stop";
         start_stop.textContent = "Stop"
+        start_stop.style.backgroundColor = "red";
     } else if (state == "stop") {
         stopTimer(time);
         state = "start"
         start_stop.textContent = "Start"
+        start_stop.style.backgroundColor = "chartreuse";
     }
 }
 
