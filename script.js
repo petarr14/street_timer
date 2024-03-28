@@ -40,12 +40,8 @@ function stopTimer(duration) {
     start_stop.textContent = "Start"
 }
 
-start_stop = document.querySelector("button");
-state = "start"
-display = document.querySelector('.timer p');
-
-start_stop.addEventListener("click", function () {
-    time = parseInt(document.querySelector(".timer input").value); // your time in seconds here
+function start_stop_timer() {
+    time = parseInt(timer_input.value); // your time in seconds here
     if (state == "start") {
         startTimer(time, display);
         state = "stop";
@@ -54,5 +50,20 @@ start_stop.addEventListener("click", function () {
         stopTimer(time);
         state = "start"
         start_stop.textContent = "Start"
+    }
+}
+
+start_stop = document.querySelector("button");
+state = "start"
+display = document.querySelector('.timer p');
+timer_input = document.querySelector(".timer input");
+
+start_stop.addEventListener("click", function () {
+    start_stop_timer();
+});
+
+timer_input.addEventListener("keyup", function(event) {
+    if (event.key == "Enter") {
+        start_stop_timer();
     }
 });
