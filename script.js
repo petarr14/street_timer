@@ -1,6 +1,5 @@
 function startTimer(duration, display) {
-    var prepare = true;
-    var timer = 5, minutes, seconds;
+    var timer = duration, minutes, seconds;
     var blip = new Audio("blip.wav");
     var blip2 = new Audio("blip2.wav");
     setInterval(function () {
@@ -14,13 +13,8 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             blip2.play();
-            if (prepare) {
-                timer = duration;
-                prepare = false;
-            } else {
-                timer = 0;
-                stopTimer(duration);
-            }
+            timer = 0;
+            stopTimer(duration);
         }
         if (timer < 5) {
             blip.play();
