@@ -15,3 +15,7 @@ button {
     padding: 5vw;
     color: white;
 }
+
+.timer > * {
+    display: block;
+}
