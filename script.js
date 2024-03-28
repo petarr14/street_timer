@@ -40,7 +40,7 @@ function stopTimer(duration) {
     start_stop.textContent = "Start"
 }
 
-start_stop = document.querySelector(".button button");
+start_stop = document.querySelector("button");
 state = "start"
 display = document.querySelector('.timer p');
 
