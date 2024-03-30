@@ -15,7 +15,6 @@ function startTimer(duration, display) {
             blip2.play();
             timer = 0;
             stopTimer(duration);
-            set_count_up();
         }
         if (timer < 10) {
             blip.play();
@@ -49,6 +48,7 @@ function start_stop_timer() {
         state = "stop";
         start_stop.textContent = "Stop"
         start_stop.style.backgroundColor = "red";
+        set_count_up();
     } else if (state == "stop") {
         stopTimer(time);
         state = "start";
