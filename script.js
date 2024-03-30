@@ -17,7 +17,7 @@ function startTimer(duration, display) {
             stopTimer(duration);
             set_count_up();
         }
-        if (timer < 5) {
+        if (timer < 10) {
             blip.play();
         }
     }, 1000);
